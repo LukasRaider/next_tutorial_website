@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images:{
+        domains: ["images/unsplash.com"],
+    },
+    redirects:async () => {
+        return [{
+            source: '/Login-form/Signup',
+            destination: "/",
+            permanent: false,
+        },];
+    },
+    };
 
-export default nextConfig;
+module.exports = nextConfig;
